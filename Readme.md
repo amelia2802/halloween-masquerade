@@ -2,7 +2,8 @@
 
 An interactive Halloween-themed web application that takes users on a personalized journey through the supernatural world of Mystic Falls. Choose your attire, find your dance partner, and discover your true supernatural identity at the legendary Founder's Ball.
 
-![The Founder's Ball Banner](./assets/img/bg.jpg)
+[!The Founder's Ball](https://github.com/user-attachments/assets/1801544b-84b8-4958-922e-572c57467148)
+
 
 This project is part of [Frontend Challenge: Halloween Edition](https://dev.to/challenges/frontend-2025-10-15)
 
