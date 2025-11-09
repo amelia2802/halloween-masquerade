@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Cormorant Garamond", serif;
+    letter-spacing: 3px;
+    color: gainsboro;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Cinzel", serif;
+    text-transform: capitalize;
+    color:#fff;
+    text-shadow: 0 0 10px goldenrod;
+}
+
+main{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image:radial-gradient(
+                    rgba(0, 0, 0, 0.5), 
+                    rgba(1, 1, 1, 0.5)
+                ),  url("./assets/img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:5em 1em ;
+    gap: 1em;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+.org,.event{
+    color:goldenrod;
+    font-weight: 600;
+}
+
+.event{
+    font-size: 1.5em;
+}
+
+.heading-desc{
+    width: 60%;
+    font-size: 1.2em;
+}
+
+.enter-ball,#reveal{
+    padding: 1em;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: "Cinzel", serif;
+    background-color: #42378f;
+    background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+    font-weight: 600;
+    color: oldlace;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.enter-ball:hover,#reveal:hover,.enter-ball:focus,#reveal:focus{
+    transform: scale(1.1);
+}
+
+.user-attaire,.user-outfit,.user-partner,.user-identity,.user-story{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 1em;
+    background-color: #000000;
+    text-align: center;
+    background-image: linear-gradient(147deg, #3d0202 0%, #000000 74%);
+}
+
+#attaire{
+    display: flex;
+    gap: 10em;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.attaire-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:15em;
+    height: 12em;
+    background-color: #080808;
+    border: #6b040b 1px solid;
+    border-radius: 8px;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.select-attaire,.select-outfit,.select-partner{
+    padding: 1em 6em;
+    border-radius: 8px;
+    font-family: "Cinzel", serif;
+    background-color: #000;
+    font-weight: 600;
+    color: oldlace;
+    border: red 1px solid;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.select-attaire:hover,.select-outfit:hover,.select-partner:hover{
+    background-color: rgb(111, 14, 14);
+    transform: scale(1.1);
+}
+
+#outfit,#partner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.dress-card,.partner-card{
+    width: 23em;
+    height: 42em;
+    background-color: #080808;
+    border: #6b040b 1px solid;
+    border-radius: 8px;
+    padding: 1em;
+    cursor: pointer;
+    text-indent: 9px;
+}
+
+.dress-img,.partner-img{
+    width: 100%;
+    height: 25em;
+    border-radius: 25px;
+}
+
+.dress-img img, .partner-img img{
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    border-radius: 25px;
+}
+
+.user-identity img{
+    width: 20em;
+    height: 20em;
+}
+
+.identity-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-images{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.story-images img{
+    width: 25em;
+    height: 25em;
+}
+
+.hidden{
+    display: none;
+}
+
+.active{
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity:0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Tablets and small laptops (1024px and below) */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .heading-desc {
+        width: 75%;
+        font-size: 1.1em;
+    }
+
+    .event {
+        font-size: 1.3em;
+    }
+
+    #attaire {
+        gap: 5em;
+    }
+
+    #outfit, #partner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
+    }
+
+    .dress-card, .partner-card {
+        width: 20em;
+        height: auto;
+    }
+
+    .story-images img {
+        width: 20em;
+        height: 20em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    main {
+        padding: 3em 1em;
+    }
+
+    .heading-desc {
+        width: 85%;
+        font-size: 1em;
+    }
+
+    .event {
+        font-size: 1.2em;
+    }
+
+    #attaire {
+        gap: 2em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .attaire-card {
+        width: 18em;
+        height: 20em;
+    }
+
+    .attaire-card p {
+        font-size: 3em;
+    }
+
+    #outfit, #partner {
+        grid-template-columns: 1fr;
+        gap: 2em;
+        padding: 0 1em;
+    }
+
+    .dress-card, .partner-card {
+        width: 100%;
+        max-width: 25em;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .dress-img, .partner-img {
+        height: 20em;
+    }
+
+    .select-attaire, .select-outfit, .select-partner {
+        padding: 0.8em 4em;
+        font-size: 0.9em;
+    }
+
+    .story-images {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .story-images img {
+        width: 18em;
+        height: 18em;
+    }
+
+    .user-identity img {
+        width: 18em;
+        height: 18em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    main {
+        padding: 2em 0.5em;
+        gap: 0.8em;
+    }
+
+    .org, .event {
+        font-size: 1em;
+    }
+
+    .heading-desc {
+        width: 90%;
+        font-size: 0.9em;
+    }
+
+    .enter-ball, #reveal {
+        padding: 0.8em 2em;
+        font-size: 0.9em;
+    }
+
+    .user-attaire, .user-outfit, .user-partner, .user-identity, .user-story {
+        padding: 2em 0.5em;
+    }
+
+    #attaire {
+        gap: 1.5em;
+    }
+
+    .attaire-card {
+        width: 15em;
+        height: 20em;
+    }
+
+    .attaire-card p {
+        font-size: 2.5em;
+    }
+
+    .attaire-card h3 {
+        font-size: 1em;
+    }
+
+    .select-attaire, .select-outfit, .select-partner {
+        padding: 0.7em 2.5em;
+        font-size: 0.85em;
+    }
+
+    #outfit, #partner {
+        gap: 1.5em;
+        padding: 0 0.5em;
+    }
+
+    .dress-card, .partner-card {
+        width: 100%;
+        max-width: 20em;
+        height: auto;
+        padding: 0.8em;
+    }
+
+    .dress-img, .partner-img {
+        height: 18em;
+    }
+
+    .dress-card h3, .partner-card h3 {
+        font-size: 1em;
+    }
+
+    .dress-card p, .partner-card p {
+        font-size: 0.9em;
+    }
+
+    .story-images {
+        gap: 1em;
+    }
+
+    .story-images img {
+        width: 15em;
+        height: 15em;
+    }
+
+    .story-item h3 {
+        font-size: 0.9em;
+    }
+
+    .user-identity img {
+        width: 15em;
+        height: 15em;
+    }
+
+    .final-message {
+        font-size: 1em;
+        padding: 0 1em;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 1.3em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    .heading-desc {
+        font-size: 0.85em;
+    }
+
+    .attaire-card {
+        width: 13em;
+        height: 16em;
+    }
+
+    .dress-card, .partner-card {
+        max-width: 18em;
+    }
+
+    .dress-img, .partner-img {
+        height: 15em;
+    }
+
+    .story-images img {
+        width: 13em;
+        height: 13em;
+    }
+
+    .user-identity img {
+        width: 13em;
+        height: 13em;
+    }
+
+    .select-attaire, .select-outfit, .select-partner {
+        padding: 0.6em 2em;
+        font-size: 0.8em;
+    }
+
+    .enter-ball, #reveal {
+        padding: 0.7em 1.5em;
+        font-size: 0.85em;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="A Halloween Masquerade">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Amelia Dutta">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <title>The Founder's Ball</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="active">
+            <div>
+                <p class="org">Mystic Falls Presents</p>
+                <h1>The Founder's Ball</h1>
+                <p class="event">A Halloween Masquerade</p>
+            </div>
+            <p class="heading-desc">Step into the shadows of Mystic Falls for an evening of mystery, romance, and supernatural intrigue. Choose your destiny, find your dance partner, and discover what lurks beneath the mask.</p>
+            <button class="enter-ball">Enter the Ball</button>
+            <p>October 31st • Lockwood Mansion • Sunset to Midnight</p>
+        </main>
+        <section class="user-attaire active hidden">
+            <h2>Choose Your Attire</h2>
+            <p class="heading-desc">Select the style that speaks to you</p>
+            <div id="attaire"></div>
+        </section>
+        <section class="user-outfit active hidden">
+            <h2>Select Your Ball Attire</h2>
+            <p class="heading-desc">Choose an outfit worthy of the Founder's Ball</p>
+            <div id="outfit"></div>
+        </section>
+        <section class="user-partner active hidden">
+            <h2>Choose Your Dance Partner</h2>
+            <p class="heading-desc">Who will accompany you through the midnight waltz?</p>
+            <div id="partner"></div>
+        </section>
+        <section class="user-identity active hidden" id="truth">
+            <h2>The Truth Awaits</h2>
+            <p class="heading-desc">Are you ready to discover your supernatural identity?</p>
+            <div >
+                <div class="identity-card">
+                    <img src="./assets/img/mask.png" alt="masquerade mask" />
+                    <p>Remove the mask and reveal what lies beneath...</p>
+                    <button id="reveal">Reveal My Identity</button>
+                </div>
+            </div>
+        </section>
+        <section class="user-story active hidden">
+            <h2>Your Mystic Falls Story</h2>
+        </section>
+
+        <script type="module" src="./script.js"></script>
+    </body>
+</html>
